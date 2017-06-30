@@ -1,0 +1,16 @@
+<page>
+<view class="container">
+ 
+ <block wx:for="{{subjectList}}"  wx:for-index="idx1" wx:for-item="item1">  
+   <navigator class="block" url="subject_detail?subject_id={{item1.subjectid}}" >
+      <view class="hover" style="background-color: {{idx1==1?'#fbc420':'#4bc93b'}}">
+        <text class="title f16">{{item1.subject}}</text>
+        <view class="mgt10 f12"> CSS HTML5 javascript juqery angularjs boostrap </view>
+      </view>
+      <view class="cover">
+          <image src="{{item1.picUrl}}" alt="" ></image>
+      </view>
+    </navigator>
+ </block>
+</view>
+</page>

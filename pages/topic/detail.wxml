@@ -1,0 +1,47 @@
+<page >
+
+<view  class="container pd10">
+  <text class="title">{{data.title}}</text>
+   <!--头部-->
+   <view class="topic_head">
+    <image  src="{{data.user.headimg}}"></image>
+    <view class="topic_head_body mgt5">
+       <text>{{data.user.nickname}}</text>
+       <text class="light mgt10">{{data.time_tran}}</text>
+    </view>
+   </view>
+    <!--正文-->
+     <view class="topic_content">
+ 
+        {{data.wx_content}}
+        <block wx:for="{{data.imgList}}"  wx:for-index="idx" wx:for-item="image"> 
+          <image bindtap="previewImage" src="{{image}}" />
+        </block>
+     </view>
+     <!--评论-->
+     <text class="light mgt10 p">全部回答</text>
+     <include src="../include/comment.wxml"/>
+    <!--//回复按键-->
+     
+</view>
+
+
+<view class="bottom">
+         <view class="btn-d" bindtap="reply">我要回答</view>
+</view>
+<!--弹出层-->
+<view class="popup {{popup==1?'modal-in':'none'}}" >
+<form bindsubmit="formSubmit">
+  <view class="reply">
+   <textarea name="content" value="{{reply.value}}" auto-focus auto-height placeholder="{{reply.placeholder}}"  />
+  <view class="reply-button">
+   <button type="default"  size="mini"   bindtap="btn_cancel"> 取消 </button>
+  
+  <button type="primary" size="mini" loading="{{loading}}" 
+        disabled="{{disabled}}"  formType="submit"> 提交 </button>
+    </view>
+  </view>
+ </form> 
+</view>
+<!--弹出层-->
+</page>

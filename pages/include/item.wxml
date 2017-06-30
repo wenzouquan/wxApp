@@ -1,0 +1,11 @@
+<template name="item">
+ <block wx:for="{{listData}}"  wx:for-index="idx" wx:for-item="item"> 
+        <navigator class="media" url="{{link}}{{item.subjectid}}"  style=" padding-bottom:10px">  
+               <image  class="subjectPic pull-left" src="{{item.picUrl}}"></image>
+                <view class="media-body" style="margin-left:155rpx">
+                    <view class="media-heading">{{item.subject}}</view>
+                    <view class="mgt5"><text class="f12 muted "> {{item.end_date}}</text> </view> 
+                    </view>
+        </navigator>
+ </block>
+</template>

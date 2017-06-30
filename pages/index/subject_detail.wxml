@@ -1,0 +1,68 @@
+<page>
+<view class="container">
+    <view  style="background:#fff;">
+              <image src="{{data.picUrl}}@475h_800w_1e_0c" ></image>        
+                  <view class="course_info">    
+                        <view class="f24">{{data.subject}} </view>
+                        <view class="course_price mgt10"> 
+                            <text class="f24 red">￥</text>
+                            <text class="nav-price" id="order_amount_text" style=" font-size:48rpx"> {{data.price}}</text>
+                            <text class="light f14 mgl10">(共有 {{buy_count}} 名学员)</text>
+                        </view>
+                        <view class="light mgt10">{{data.class_hours}}课时 <text class="light">/</text> 报名即学 至 {{data.end_date}}</view>
+                    </view> 
+      <view class="sortlist clearfix">
+        <view data-nav="1" bindtap="sortlist" class="{{sortNav==1?'active':''}}">购买须知</view>
+        <view data-nav="2" bindtap="sortlist" class="{{sortNav==2?'active':''}}">课程表</view>
+        <view data-nav="3" bindtap="sortlist" class="{{sortNav==3?'active':''}}">学员心声</view>
+      </view>  
+      <view class="detail_content pd10 {{sortNav==1?'':'none'}}">{{data.content}}</view> 
+      <!--课程列表结束-->
+      <view class="detail_content {{sortNav==2?'':'none'}}">
+     <include src="../include/lesson.wxml"/>
+      </view> 
+      <!--课程列表结束-->
+      <!--学员心声-->
+      <view class="detail_content {{sortNav==3?'':'none'}}">
+     <include src="../include/media.wxml"/>
+      </view>   
+       <!--学员心声-->
+    </view>
+</view>
+<view class="bottom">
+<view class="buyBtn">
+  <text class="nav-price" style=" font-size:48rpx">￥ {{data.price}}</text>
+  <view class="s_right">
+  <navigator url="../subject/start?subjectid={{item.subjectid}}" >试听</navigator>
+  <navigator class="primary" bindtap="showPopup">立即报名</navigator>
+ </view>
+ <view class="clearfix"></view>
+</view>
+</view>
+
+<!--弹出层-->
+<view bindtap="btn_cancel" class="popupBg {{popup==1?'modal-in':'none'}}"></view>
+<view style="height:auto"   class="popup {{popup==1?'modal-in':'none'}}" >
+<form >
+  <view class="reply">
+  <view class="item">
+    <text>学币支付</text><text style=" font-size:30rpx" class="light">(可用余额￥{{user_info.money}})</text>
+    <input value="" type="number" bindinput="yieNumber" name="yie" placeholder="学币" auto-focus/>
+  </view>
+    <view class="item">
+    <text>优惠码</text><text style=" font-size:30rpx" class="light">(最高可优惠￥1680)</text>
+    <input value="" type="text" bindblur="blurSchoolNum" name="school_num" placeholder="优惠码" auto-focus/>
+    <view class="error_msg">{{SchoolNumMsg}}</view>
+  </view>
+
+  <view class="buy-button">
+  <text class="nav-price" style=" font-size:48rpx">￥ {{goods_amount}} </text><text style=" font-size:30rpx" class="light">(已省￥{{saveMoney}}))</text>
+   <button bindtap="formSubmit" type="primary" loading="{{loading}}" 
+        disabled="{{disabled}}" > 立即支付 </button>
+  </view>
+  </view>
+ </form> 
+</view>
+<!--弹出层-->
+
+</page>

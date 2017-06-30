@@ -1,0 +1,154 @@
+ <page>
+<view class="container">
+
+<view class="list-li">
+        <view class="ul">
+          <navigator  bindtap="popup" data-popup="1" class="li mgt10">
+           <text>头像</text>
+             <image class="to-right" src="../../image/arrowright.png" alt="" />
+           <image class="li-center" src="{{user_info.headimg}}" alt=""/>
+         
+          </navigator>
+          
+          <navigator   bindtap="popup" data-popup="2" class="li">
+           <text>昵称</text>
+             <image class="to-right" src="../../image/arrowright.png" alt="" />
+            <text class="li-center">{{user_info.nickname}}</text>
+          </navigator>
+
+           <navigator   bindtap="popup" data-popup="3" class="li">
+           <text>姓名</text>
+             <image class="to-right" src="../../image/arrowright.png" alt="" />
+            <text class="li-center">{{user_info.name}}</text>
+          </navigator>
+
+           <navigator   bindtap="popup" data-popup="4" class="li">
+           <text>性别</text>
+             <image class="to-right" src="../../image/arrowright.png" alt="" />
+            <text class="li-center">{{user_info.sex_str}}</text>
+          </navigator>
+        
+          <navigator   bindtap="popup" data-popup="5"  class="li">
+           <text>收货地址</text>
+             <image class="to-right" src="../../image/arrowright.png" alt="" />
+            <text class="li-center">{{user_info.address}}</text>
+          </navigator>
+        </view>
+       </view>
+
+   </view>
+   <!--弹出层-->
+<view class="popup {{popup==1?'modal-in':'none'}}" >
+<form bindsubmit="formSubmitImg">
+  <view class="reply">
+  <!--上传图片-->
+   <view class="images-wrapper">
+          <text class="images-text">更换头像</text>
+          <view class="images-list">
+              <view class="images-one">
+                <image src="{{headImage[0]}}" class="images-image" data-src="{{headImage[0]}}" bindtap="previewImage"></image>
+              </view>
+            <view class="images-image image-plus {{hidechooseImage==1?'none':''}}" bindtap="chooseImage">
+              <view class="image-plus-horizontal"></view>
+              <view class="image-plus-vertical"></view>
+            </view>
+          </view>
+   </view>
+<!--上传图片结束-->
+  <view class="reply-button">
+   <button type="default"  size="mini"   bindtap="btn_cancel"> 取消 </button>
+  
+  <button type="primary" size="mini" loading="{{loading}}" 
+        disabled="{{disabled}}"  formType="submit"> 保存 </button>
+    </view>
+  </view>
+ </form> 
+</view>
+<!--弹出层-->
+
+ <!--弹出层-->
+<view class="popup {{popup==2?'modal-in':'none'}}" >
+<form bindsubmit="formSubmit">
+  <view class="reply">
+  <input value="{{user_info.nickname}}" type="text" name="nickname" placeholder="昵称" auto-focus/>
+  <view class="reply-button">
+   <button type="default"  size="mini"   bindtap="btn_cancel"> 取消 </button>
+  
+  <button type="primary" size="mini" loading="{{loading}}" 
+        disabled="{{disabled}}"  formType="submit"> 保存 </button>
+    </view>
+  </view>
+ </form> 
+</view>
+<!--弹出层-->
+
+ <!--弹出层-->
+<view class="popup {{popup==3?'modal-in':'none'}}" >
+<form bindsubmit="formSubmit">
+  <view class="reply">
+  <input value="{{user_info.name}}" type="text" name="name" placeholder="姓名" auto-focus/>
+  <view class="reply-button">
+   <button type="default"  size="mini"   bindtap="btn_cancel"> 取消 </button>
+  
+  <button type="primary" size="mini" loading="{{loading}}" 
+        disabled="{{disabled}}"  formType="submit"> 保存 </button>
+    </view>
+  </view>
+ </form> 
+</view>
+<!--弹出层-->
+
+ <!--弹出层-->
+<view class="popup {{popup==4?'modal-in':'none'}}" >
+<form >
+  <view class="reply">
+  <view class="lineView">
+   <input  value="{{sex}}" type="text" name="sex" placeholder="性别" auto-focus/>
+ </view>
+     <view class="list-li">
+        <view class="ul">
+          <navigator  bindtap="radioChange" data-sex="1" class="li mgt10">
+           <text>男</text>
+           <block wx:if="{{sex==1}}">
+            <text class="to-right">√ </text>
+            </block>
+          </navigator>
+          
+          <navigator   bindtap="radioChange" data-sex="2" class="li">
+           <text>女</text>
+        <block wx:if="{{sex==2}}">
+          <text class="to-right">√ </text>
+           </block>
+          </navigator>
+
+        </view>
+    </view>
+ 
+  <view class="reply-button mgt20">
+   <button type="default"  size="mini"   bindtap="btn_cancel"> 取消 </button>
+  <button type="primary" size="mini" loading="{{loading}}" 
+        disabled="{{disabled}}" bindtap="formSubmit_sex"  formType="submit"> 保存 </button>
+    </view>
+  </view>
+ </form> 
+</view>
+<!--弹出层-->
+
+ <!--弹出层-->
+<view class="popup {{popup==5?'modal-in':'none'}}" >
+<form bindsubmit="formSubmit">
+  <view class="reply">
+  <input value="{{user_info.address}}" type="text" name="address" placeholder="收货地址" auto-focus/>
+  <view class="reply-button">
+   <button type="default"  size="mini"   bindtap="btn_cancel"> 取消 </button>
+  
+  <button type="primary" size="mini" loading="{{loading}}" 
+        disabled="{{disabled}}"  formType="submit"> 提交 </button>
+    </view>
+  </view>
+ </form> 
+</view>
+<!--弹出层-->
+
+
+</page>

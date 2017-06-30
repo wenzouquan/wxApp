@@ -1,0 +1,19 @@
+/**index.wxss**/
+ .block{
+  display:block;
+  position: relative;
+  height: 49%;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1%;
+}
+.block image{width: 100%}
+.block .hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #288ace;
+  padding: 40rpx;
+  color: #FFF;
+  width: 100%;
+}

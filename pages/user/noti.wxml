@@ -1,0 +1,12 @@
+ <view class="unstyled myfeed after_div" style="border:none">
+    <block wx:for="{{listData}}"  wx:for-index="idx" wx:for-item="item"> 
+        <view class="media" style="border-bottom:1px solid #EAEAEA; padding-bottom:10px">
+                <view class="media-body" style="margin:0 20rpx;">
+                    <view class="media-heading">
+                    {{item.content}}                   
+                    </view>
+                    <view class="mgt5"><text class="f12 muted ">{{item.time_tran}}</text> </view> 
+                    </view>
+        </view>
+    </block>
+</view>

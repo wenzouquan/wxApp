@@ -1,0 +1,59 @@
+<page>
+<view class="container">
+   <view class="banner-class">
+     <view class="l-promo-block-v1-content">
+       <view class="class_img text-center">
+           <image class="_ico" src="{{user_info.headimg}}" alt="" />
+           <view class="mgt10"><text>{{user_info.nickname}}</text></view>
+       </view>
+
+       <view class="ul">
+          <view class="li border-none">
+           <text>{{user_info.money}}</text>
+           <text>学币</text>
+          </view>
+          <view class="li">
+           <text>{{user_info.xuebazi}}</text>
+           <text>学分</text>
+          </view>
+          <view class="li">
+           <text>{{user_info.ask_num}}</text>
+           <text>提问数</text>
+          </view>
+       </view>
+     </view>
+   </view>
+
+<view class="list-li">
+        <view class="ul">
+          <navigator url="timeline" class="li mgt10">
+           <image src="../../image/54freesmallicons/clock.png" alt=""/>
+           <text>动态</text>
+           <image class="to-right" src="../../image/arrowright.png" alt="" />
+          </navigator>
+          <navigator  url="info" class="li">
+            <image src="../../image/2014021811/8.png" alt="" />
+           <text>帐户设置</text>
+           <image class="to-right" src="../../image/arrowright.png" alt="" />
+          </navigator>
+          <navigator  url="money" class="li mgt10">
+           <image src="../../image/54freesmallicons/piggy.png" alt="" />
+           <text>我的财务</text>
+          <image class="to-right" src="../../image/arrowright.png" alt="" />
+          </navigator>
+          <navigator  url="ask" class="li mgt10">
+           <image src="../../image/54freesmallicons/chalkboard.png" alt="" />
+           <text>提问数</text>
+           <image class="to-right" src="../../image/arrowright.png" alt="" />
+          </navigator>
+          <navigator  url="noti" class="li">
+           <image src="../../image/54freesmallicons/drop.png" alt="" />
+           <text>消息</text>{{text}}
+           <image class="to-right" src="../../image/arrowright.png" alt="" />
+          </navigator>
+          
+        </view>
+       </view>
+
+   </view>
+</page>
