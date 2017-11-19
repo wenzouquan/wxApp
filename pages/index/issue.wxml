@@ -1,0 +1,62 @@
+<page>
+ <view class="container">
+
+<view class="list-li">
+        <view class="ul">
+          <view  class="li mgt10">
+           <text class="li-input-text">说明</text>
+           <view class="li-input">
+             <input placeholder="想和什么样的人，吃一顿怎么样的饭" maxlength="100" />
+           </view>
+          </view>
+
+             <navigator   bindtap="popup" data-popup="2" class="li">
+           <text class="li-input-text">想在哪吃</text>
+             <image class="to-right" src="../../image/arrowright.png" alt="" />
+            <view class="li-input">全聚德</view>
+          </navigator>
+
+          <view  class="li mgt10">
+           <text class="li-input-text">邀请人数</text>
+           <view class="li-input">
+             <picker bindchange="bindPickerChange" value="{{index}}" range="{{numberOfPeople}}">
+    <view class="picker"> 1 人 {{numberOfPeople[index]}}</view>
+  </picker>
+           </view>
+          </view>
+
+           <view  class="li">
+           <text class="li-input-text">时间</text>
+           <view class="li-input">
+             <picker mode="date" value="{{date}}" start="2017-11-02" end="2020-09-01" bindchange="bindDateChange">
+    <view class="picker">2017-09-01{{date}}</view>
+  </picker>
+           </view>
+          </view>
+          
+
+            <view  class="li">
+           <text class="li-input-text">人均（¥）</text>
+            <view class="li-input">
+             <picker bindchange="bindPickerChange" value="{{expenseIndex}}" range="{{expenseArray}}">
+    <view class="picker"> 100以内 {{expenseArray[expenseIndex]}}</view>
+  </picker>
+           </view>
+          </view>
+
+         <view  class="li mgt10">
+           <text class="li-input-text">对象</text>
+           <view class="li-input">
+             <picker bindchange="bindPickerChange" value="{{genderIndex}}" range="{{genderArray}}">
+    <view class="picker"> 男女均可 {{genderArray[genderIndex]}}</view>
+  </picker>
+           </view>
+          </view>
+      
+        </view>
+       </view>
+       <view class='bottom-tip'>
+          <text>芝麻信用600分以上，安全可信任</text>
+       </view>
+  </view>
+</page>

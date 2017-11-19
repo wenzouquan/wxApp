@@ -1,12 +1,13 @@
 page {
   background-color: #fbf9fe;
   height: 100%;
+   font-size: 26rpx;
 }
 .container {
   flex-direction: column;
   min-height: 100%;
   justify-content: space-between;
-  font-size: 32rpx;
+ 
 }
 .lineHContent{line-height: 55rpx;color: #333;}
 .pd10{ padding: 20rpx}
@@ -146,9 +147,9 @@ page {
 
 
 .banner-class{
-    height: 400rpx;
-    background: url(../../image/01.png) no-repeat center top;
-    color: #fff!important;
+    height: 300rpx;
+    background: url('https://static.oschina.net/uploads/space/2017/1119/143249_eUdO_1160364.jpg') no-repeat center;
+    color: #fff!important; background-size: 100%;
 }
 
 .l-promo-block-v1-content {
@@ -211,7 +212,7 @@ page {
 .topic_head_body{ margin-left: 10rpx; }
 .topic_content{ line-height: 48rpx;margin-top: 30rpx; border-bottom: 1px solid #ededed; padding-bottom: 30rpx }
 .p{ display: block}
-.bottom{ position: fixed;  width:100%; background-color: #fff; bottom:0; border-top:1px solid #DFDFDF}
+
 .btn-d{ width: 100%; height: 100rpx; text-align: center; line-height: 100rpx; color: #555; font-weight: normal; font-size: 32rpx;}
 .popupBg{width: 100%; height: 100%; background-color: #000; position:fixed;top:0; left: 0px; filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5; }
 .popup{  height: 100%; background-color: #fff; position:fixed; width: 100%; bottom: 0px; left: 0px; overflow-y: scroll; }
@@ -287,3 +288,4 @@ to { -webkit-transform: translate3d(0,100%,0);
 .guide-step{  margin-top: 40rpx; }
 .guide-step .step_ico{ margin-left: 20rpx;float: left; width: 50rpx; height: 50rpx; text-align: center; line-height: 60rpx; color: #fff;  background-color: #68c04a; border-radius: 50%;}
 .guide-step .step_text{ margin-left: 80rpx;margin-top: 10rpx;  margin-right: 20rpx;} 
+.bottom-tip{ color: #999999; position: absolute;width: 100%; left: 0;bottom: 30rpx; text-align: center}

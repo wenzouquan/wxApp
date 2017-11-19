@@ -1,16 +1,12 @@
 <page>
-<view class="container">
- 
- <block wx:for="{{subjectList}}"  wx:for-index="idx1" wx:for-item="item1">  
-   <navigator class="block" url="subject_detail?subject_id={{item1.subjectid}}" >
-      <view class="hover" style="background-color: {{idx1==1?'#fbc420':'#4bc93b'}}">
-        <text class="title f16">{{item1.subject}}</text>
-        <view class="mgt10 f12"> CSS HTML5 javascript juqery angularjs boostrap </view>
-      </view>
-      <view class="cover">
-          <image src="{{item1.picUrl}}" alt="" ></image>
-      </view>
-    </navigator>
- </block>
-</view>
+ <view class="map">
+     <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 100%;">
+     <cover-view class="header" bindtap="jumpUser">
+      <cover-image src='../../image/01.jpeg' alt="用户中心"></cover-image>
+      </cover-view>
+      <cover-view class="bottom">
+        <cover-view class="bottom-count pull-left">共1045位饭友正在附近觅食 </cover-view > <cover-view bindtap="jumpIssue"  class="bottom-btn pull-left">找人吃饭</cover-view>
+      </cover-view>
+     </map>     
+     </view>
 </page>

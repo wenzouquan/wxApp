@@ -1,0 +1,12 @@
+<!-- <view class='header clearfix'>
+  <view class="users pull-left">
+    <navigator url="../user/index" ><image src='../../image/01.jpeg' alt="用户中心"></image></navigator></view>
+  <view class="chooseCity pull-right">
+    <view class="pull-left">上海【切换城市】</view>
+  </view>
+</view> -->
+
+<cover-view class="header">
+ <cover-image src='../../image/01.jpeg' alt="用户中心"></cover-image>
+</cover-view>
+

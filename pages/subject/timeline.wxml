@@ -1,2 +1,0 @@
-<import src="../include/timeline.wxml"/>
-<template is="timeline" data="{{listData:listData,scrollH:scrollH}}"/> 

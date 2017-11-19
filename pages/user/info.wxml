@@ -6,14 +6,14 @@
           <navigator  bindtap="popup" data-popup="1" class="li mgt10">
            <text>头像</text>
              <image class="to-right" src="../../image/arrowright.png" alt="" />
-           <image class="li-center" src="{{user_info.headimg}}" alt=""/>
+           <image class="li-center" src="{{user_info.avatarUrl}}" alt=""/>
          
           </navigator>
           
           <navigator   bindtap="popup" data-popup="2" class="li">
            <text>昵称</text>
              <image class="to-right" src="../../image/arrowright.png" alt="" />
-            <text class="li-center">{{user_info.nickname}}</text>
+            <text class="li-center">{{user_info.nickName}}</text>
           </navigator>
 
            <navigator   bindtap="popup" data-popup="3" class="li">
@@ -25,7 +25,7 @@
            <navigator   bindtap="popup" data-popup="4" class="li">
            <text>性别</text>
              <image class="to-right" src="../../image/arrowright.png" alt="" />
-            <text class="li-center">{{user_info.sex_str}}</text>
+            <text class="li-center">{{user_info.gender==1?'男':'女'}}</text>
           </navigator>
         
           <navigator   bindtap="popup" data-popup="5"  class="li">
@@ -70,7 +70,7 @@
 <view class="popup {{popup==2?'modal-in':'none'}}" >
 <form bindsubmit="formSubmit">
   <view class="reply">
-  <input value="{{user_info.nickname}}" type="text" name="nickname" placeholder="昵称" auto-focus/>
+  <input value="{{user_info.nickName}}" type="text" name="nickName" placeholder="昵称" auto-focus/>
   <view class="reply-button">
    <button type="default"  size="mini"   bindtap="btn_cancel"> 取消 </button>
   

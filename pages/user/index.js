@@ -25,6 +25,7 @@ Page({
   onLoad: function () {
     var that = this;
     var user_info=wx.getStorageSync('user_info');
+    console.log(user_info);
     if(user_info){
         that.setData({'user_info':user_info});  
     }else{

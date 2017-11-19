@@ -1,54 +1,21 @@
 
 {
   "pages":[
-    "pages/user/index",
     "pages/index/index",
-     "pages/index/subject_detail",
-    "pages/subject/index",
-    "pages/subject/start",
-    "pages/subject/lesson",
-    "pages/logs/logs",
-    "pages/topic/detail",
-    "pages/topic/askList",
-    "pages/subject/timeline",
-    "pages/subject/point",
-    "pages/subject/apply_award_cash",
-      "pages/subject/apply_relearn",
-    "pages/user/timeline",
-    "pages/user/money",
-    "pages/user/ask",
+    "pages/index/issue",
+    "pages/user/index",
     "pages/user/info",
-    "pages/user/noti"
+    "pages/user/noti",
+    "pages/user/timeline"
   ],
    "window": {
     "navigationBarTextStyle": "#ffffff",
-    "navigationBarTitleText": "跟着大师兄学编程",
+    "navigationBarTitleText": "拼吃饭",
     "navigationBarBackgroundColor": "#000000",
-    "backgroundColor": "#fff"
+    "backgroundColor": "#ffffff"
     
   },
-  "tabBar": {
-    "color": "#999",
-    "selectedColor": "#3cc51f",
-    "borderStyle": "white",
-    "backgroundColor": "#ffffff",
-    "list": [{
-      "pagePath": "pages/subject/index",
-      "iconPath": "image/icon_component.png",
-      "selectedIconPath": "image/icon_component_HL.png",
-      "text": "我的班级"
-    }, {
-      "pagePath": "pages/subject/start",
-      "iconPath": "image/icon_API.png",
-      "selectedIconPath": "image/icon_API_HL.png",
-      "text": "正在学"
-    }, {
-      "pagePath": "pages/user/index",
-      "iconPath": "image/twg_retina_icon/man_64.png",
-      "selectedIconPath": "image/twg_retina_icon/man_64.png",
-      "text": "我的..."
-    }]
-  },
+  
   "networkTimeout": {
     "request": 10000,
     "connectSocket": 10000,

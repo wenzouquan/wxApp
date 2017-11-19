@@ -1,0 +1,4 @@
+/**index.wxss**/
+.li-input-text{ width: 140rpx; color: #888888}
+.li-input input{ padding-top: 5rpx}
+

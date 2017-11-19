@@ -6,15 +6,8 @@ Page({
     var that = this;
     var user_info=wx.getStorageSync('user_info');
     that.setData({'user_info':user_info});   
-    app.getPageData("BoxApi/Subject/timeline",{'user_id':1,'type':'money'},function(data){
-        if(data.list){
-            that.setData({'listData':data.list});
-        }else{
-            that.setData({'listData':[]});
-        }  
-     });
     that.setData({
-          headImage: [user_info.headimg],sex:user_info.sex
+      headImage: [user_info.headimg], sex: user_info.gender
         }); 
   },
   popup:function(event){

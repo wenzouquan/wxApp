@@ -1,19 +1,11 @@
 /**index.wxss**/
- .block{
-  display:block;
-  position: relative;
-  height: 49%;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 1%;
-}
-.block image{width: 100%}
-.block .hover {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #288ace;
-  padding: 40rpx;
-  color: #FFF;
-  width: 100%;
-}
+.map{ flex:1; height: 100%; }
+.map #map{ border: none}
+
+.header{position: absolute; top: 20rpx; left: 20rpx;background-color:#ffffff; border-radius: 20rpx; padding: 10rpx;}
+.header cover-image{ width: 60rpx; height: 60rpx;}
+
+.bottom{ position: absolute;  bottom: 20rpx; right: 10rpx;  background-color:#ffffff; border-radius: 30rpx; padding: 30rpx; border:none;   }
+.bottom .bottom-count{ margin-top: 15rpx;}
+.bottom .bottom-btn{ background: #000000; color: #ffffff; padding: 15rpx 0;border-radius: 30rpx; margin-left: 25rpx; width: 180rpx; text-align: center; font-size: 24rpx;}
+

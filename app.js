@@ -1,7 +1,7 @@
 //app.js
 App({
   data:{
-    'apiHost':'http://www.codecamp.com/',
+    'apiHost':'http://www.eatwith.me/',
   },
   onLaunch: function () {
     //调用API从本地缓存中获取数据
@@ -10,6 +10,10 @@ App({
     // wx.setStorageSync('logs', logs);
     // console.log("app onLaunch");
     this.window();
+    this.getUserInfo(function(userInfo){
+      wx.setStorageSync("user_info", userInfo);
+    });
+   
   },
   window:function(){
      console.log("window");
@@ -18,6 +22,21 @@ App({
           _this.globalData.window=res;
           _this.globalData.window.rpx=750/res.windowWidth;
       }})
+  },
+  getLocation:function(cb){
+    var that = this
+    if (this.globalData.userLocation) {
+      typeof cb == "function" && cb(this.globalData.userLocation)
+    } else {
+      wx.getLocation({
+        type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+        success: function (res) {
+            console.log(res);
+            that.globalData.userLocation = res;
+            typeof cb == "function" && cb(that.globalData.userLocation);
+        }
+      })
+    }
   },
   getUserInfo:function(cb){
     var that = this
